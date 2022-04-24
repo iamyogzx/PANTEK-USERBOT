@@ -1,4 +1,5 @@
 # Yogzx-Userbot Telegram
+<a href="https://t.me/justbeyourss?r=nametag"><img src="https://telegra.ph/file/38c351f44981a0f0c3c1c.jpg" width="400" height="350" alt="  PANTEK-USERBOT" /></a>
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/mrismanaziz/Man-Userbot)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-green)](https://GitHub.com/mrismanaziz/Man-Userbot/graphs/commit-activity)
 [![CodeFactor](https://www.codefactor.io/repository/github/mrismanaziz/Man-Userbot/badge)](https://www.codefactor.io/repository/github/mrismanaziz/Man-Userbot)
