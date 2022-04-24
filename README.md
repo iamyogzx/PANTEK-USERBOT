@@ -70,7 +70,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 
 ## Updates & Support
 
-Follow Channel [@Lunatic0de](https://t.me/Lunatic0de) untuk info Update bot dan Gabung Group [@SharingUserbot](https://t.me/SharingUserbot) untuk untuk diskusi, pelaporan bug, dan bantuan tentang Man-Userbot.
+Follow Channel [@Makinglove](https://t.me/justbeyourss) untuk info Update bot dan Gabung Group [@SharingUserbot](https://t.me/SharingUserbot) untuk untuk diskusi, pelaporan bug, dan bantuan tentang Man-Userbot.
 
 #### Special Thanks To [Everyone](https://github.com/mrismanaziz/Man-Userbot/graphs/contributors) Who Has Helped Make This Userbot Awesome!
 -  [AdekMaulana](https://github.com/adekmaulana) : ProjectBish
