@@ -66,7 +66,7 @@ async def add_snip(event):
             )
         await event.client.send_message(
             BOTLOG_CHATID,
-            f"📝 **#CUSTOM_CMD**\n • **KEYWORD:** `#{trigger}`\n • 🔖 Pesan ini disimpan sebagai catatan data untuk custom, Tolong JANGAN Dihapus!!",
+            f"📝 **.CUSTOM_CMD**\n • **KEYWORD:** `#{trigger}`\n • 🔖 Pesan ini disimpan sebagai catatan data untuk custom, Tolong JANGAN Dihapus!!",
         )
         cht_o = await event.client.forward_messages(
             entity=BOTLOG_CHATID, messages=cht, from_peer=event.chat_id, silent=True
@@ -80,12 +80,12 @@ async def add_snip(event):
             )
         await event.client.send_message(
             BOTLOG_CHATID,
-            f"📝 **#CUSTOM_CMD**\n • **KEYWORD:** `#{trigger}`\n • 🔖 Pesan ini disimpan sebagai catatan data untuk custom, Tolong JANGAN Dihapus!!",
+            f"📝 **.CUSTOM_CMD**\n • **KEYWORD:** `.{trigger}`\n • 🔖 Pesan ini disimpan sebagai catatan data untuk custom, Tolong JANGAN Dihapus!!",
         )
         cht_o = await event.client.send_message(BOTLOG_CHATID, stri)
         cht_id = cht_o.id
         stri = None
-    success = "**custom {}. Gunakan** `#{}` **di mana saja untuk menggunakannya**"
+    success = "**custom {}. Gunakan** `.{}` **di mana saja untuk menggunakannya**"
     if sql.add_note(trigger, stri, cht_id) is False:
         sql.rm_note(trigger)
         if sql.add_note(trigger, stri, cht_id) is False:
@@ -99,12 +99,12 @@ async def _(event):
     input_str = (event.pattern_match.group(1)).lower()
     if not input_str:
         return await edit_delete(event, "**Berikan nama custom untuk dihapus**")
-    if input_str.startswith("#"):
-        input_str = input_str.replace("#", "")
+    if input_str.startswith("."):
+        input_str = input_str.replace(".", "")
     try:
         sql.rm_note(input_str)
         await edit_or_reply(
-            event, "**Berhasil menghapus custom:** `#{}`".format(input_str)
+            event, "**Berhasil menghapus custom:** `.{}`".format(input_str)
         )
     except BaseException:
         await edit_or_reply(event, "Tidak ada snip yang disimpan dengan pemicu ini.")
@@ -116,7 +116,7 @@ async def lsnote(event):
     OUT_STR = "**List Custom yang tersedia:**\n"
     if len(all_snips) > 0:
         for a_snip in all_snips:
-            OUT_STR += f"✣ `#{a_snip.keyword}` \n"
+            OUT_STR += f"✣ `.{a_snip.keyword}` \n"
     else:
         OUT_STR = "**Tidak ada custom cmd yang disimpan.**"
     if len(OUT_STR) > 4000:
